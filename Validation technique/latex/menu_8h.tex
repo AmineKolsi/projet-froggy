@@ -1,0 +1,85 @@
+\hypertarget{menu_8h}{\section{menu.\-h File Reference}
+\label{menu_8h}\index{menu.\-h@{menu.\-h}}
+}
+{\ttfamily \#include $<$allegro.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}commun.\-h\char`\"{}}\\*
+Include dependency graph for menu.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{menu_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{menu_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structbouton}{bouton}
+\begin{DoxyCompactList}\small\item\em Ceci est la structure d'un bouton qui doit apparaitre dans le menu. Elle contient les coordonnées du bouton et ses différents états (3 images) \end{DoxyCompactList}\item 
+struct \hyperlink{structicone__stage1}{icone\-\_\-stage1}
+\begin{DoxyCompactList}\small\item\em Ceci est la structure d'une icône du stage 1 qui doit apparaitre dans le menu. Elle contient les coordonnées de l'icône. \end{DoxyCompactList}\item 
+struct \hyperlink{structicone__stage2}{icone\-\_\-stage2}
+\begin{DoxyCompactList}\small\item\em Ceci est la structure d'une icône du stage 2 qui doit apparaitre dans le menu. Elle contient les coordonnées de l'icône et ses différents états (2 images) verouillé ou ouvert. \end{DoxyCompactList}\item 
+struct \hyperlink{structicone__stage3}{icone\-\_\-stage3}
+\begin{DoxyCompactList}\small\item\em Ceci est la structure d'une icône du stage 3 qui doit apparaitre dans le menu. Elle contient les coordonnées de l'icône et ses différents états (2 images) verouillé ou ouvert. \end{DoxyCompactList}\item 
+struct \hyperlink{structicone__stage4}{icone\-\_\-stage4}
+\begin{DoxyCompactList}\small\item\em Ceci est la structure d'une icône du stage 4 qui doit apparaitre dans le menu. Elle contient les coordonnées de l'icône et ses différents états (2 images) verouillé ou ouvert. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{menu_8h_a599934adf271c51c067770688c25aedb}{void \hyperlink{menu_8h_a599934adf271c51c067770688c25aedb}{init\-\_\-fond\-\_\-menu} (\hyperlink{struct_background}{Background} $\ast$fond)}\label{menu_8h_a599934adf271c51c067770688c25aedb}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'initialiser le fond du menu \end{DoxyCompactList}\item 
+\hypertarget{menu_8h_a2d4a1303a1a1a59a3fa2bda3e676e459}{void \hyperlink{menu_8h_a2d4a1303a1a1a59a3fa2bda3e676e459}{init\-\_\-menu1} (\hyperlink{structbouton}{bouton} $\ast$exit, \hyperlink{structbouton}{bouton} $\ast$help, \hyperlink{structbouton}{bouton} $\ast$play, \hyperlink{structbouton}{bouton} $\ast$son, \hyperlink{structbouton}{bouton} $\ast$son\-\_\-coupe)}\label{menu_8h_a2d4a1303a1a1a59a3fa2bda3e676e459}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser les boutons du menu 1. \end{DoxyCompactList}\item 
+\hypertarget{menu_8h_a7e3d87fbff22d0836999aaf16cefce5c}{void \hyperlink{menu_8h_a7e3d87fbff22d0836999aaf16cefce5c}{init\-\_\-menu2} (\hyperlink{structicone__stage1}{icone\-\_\-stage1} $\ast$s1, \hyperlink{structicone__stage2}{icone\-\_\-stage2} $\ast$s2, \hyperlink{structicone__stage3}{icone\-\_\-stage3} $\ast$s3, \hyperlink{structicone__stage4}{icone\-\_\-stage4} $\ast$s4)}\label{menu_8h_a7e3d87fbff22d0836999aaf16cefce5c}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser les icônes du menu 2. \end{DoxyCompactList}\item 
+\hypertarget{menu_8h_ae5e02e8e8c8ff7138a9dea9e7f3cd773}{void \hyperlink{menu_8h_ae5e02e8e8c8ff7138a9dea9e7f3cd773}{init\-\_\-bouton\-\_\-prec} (\hyperlink{structbouton}{bouton} $\ast$prec)}\label{menu_8h_ae5e02e8e8c8ff7138a9dea9e7f3cd773}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser le bouton précédent (prec) qui apparait dans chacun des menus 1, 2 et help. \end{DoxyCompactList}\item 
+\hypertarget{menu_8h_a11ab651a6b829e622d2bc7317f8053ee}{void \hyperlink{menu_8h_a11ab651a6b829e622d2bc7317f8053ee}{etat\-\_\-bouton\-\_\-prec} (int $\ast$b\-\_\-prec)}\label{menu_8h_a11ab651a6b829e622d2bc7317f8053ee}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de vérifier si le curseur est pointé ou non sur le bouton précédent (prec) Elle retourne 1 si le curseur est pointé sur le bouton, 2 si en plus la touche gauche de la souris sinon elle retourne 0. \end{DoxyCompactList}\item 
+\hypertarget{menu_8h_acf717aebdff0be29c72cfa44d5ca80ed}{void \hyperlink{menu_8h_acf717aebdff0be29c72cfa44d5ca80ed}{etat\-\_\-bouton} (int $\ast$b\-\_\-play, int $\ast$b\-\_\-exit, int $\ast$b\-\_\-help, int $\ast$b\-\_\-son)}\label{menu_8h_acf717aebdff0be29c72cfa44d5ca80ed}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de vérifier si le curseur est pointé ou non sur l'un des boutons du menu 1. Chaque paramètre reçoit 1 si le curseur est pointé sur le bouton, 2 si en plus la touche gauche de la souris sinon il prend la valeur de 0. \end{DoxyCompactList}\item 
+\hypertarget{menu_8h_a3ebb49f8f9d68cf8afef90fbcf0a9af3}{void \hyperlink{menu_8h_a3ebb49f8f9d68cf8afef90fbcf0a9af3}{blit\-\_\-boutons} (int b\-\_\-play, int b\-\_\-exit, int b\-\_\-help, int b\-\_\-son, \hyperlink{structbouton}{bouton} exit, \hyperlink{structbouton}{bouton} help, \hyperlink{structbouton}{bouton} play, \hyperlink{structbouton}{bouton} son, \hyperlink{structbouton}{bouton} son\-\_\-coupe, int sound\-\_\-off)}\label{menu_8h_a3ebb49f8f9d68cf8afef90fbcf0a9af3}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet les boutons du menu 1 en fonction de leur état. \end{DoxyCompactList}\item 
+\hypertarget{menu_8h_a0b78f1388066640830d349a6ab2f08f6}{void \hyperlink{menu_8h_a0b78f1388066640830d349a6ab2f08f6}{destroy\-\_\-boutons} (\hyperlink{structbouton}{bouton} $\ast$exit, \hyperlink{structbouton}{bouton} $\ast$help, \hyperlink{structbouton}{bouton} $\ast$play, \hyperlink{structbouton}{bouton} $\ast$son)}\label{menu_8h_a0b78f1388066640830d349a6ab2f08f6}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de libérer la mémoire allouée pour les boutons du menu 1 qui sont de type Bouton. \end{DoxyCompactList}\item 
+\hypertarget{menu_8h_a4da3c53aeeb42c0f05cd74a5aeb8c9dc}{void \hyperlink{menu_8h_a4da3c53aeeb42c0f05cd74a5aeb8c9dc}{destroy\-\_\-icones} (\hyperlink{structicone__stage1}{icone\-\_\-stage1} $\ast$s1, \hyperlink{structicone__stage2}{icone\-\_\-stage2} $\ast$s2, \hyperlink{structicone__stage3}{icone\-\_\-stage3} $\ast$s3, \hyperlink{structicone__stage4}{icone\-\_\-stage4} $\ast$s4)}\label{menu_8h_a4da3c53aeeb42c0f05cd74a5aeb8c9dc}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de libérer la mémoire allouée pour les icônes du menu 2 qui sont de type \hyperlink{structicone__stage2}{icone\-\_\-stage2}. \end{DoxyCompactList}\item 
+\hypertarget{menu_8h_a3a55ee75b3fdef8a9982eba0898f496c}{void \hyperlink{menu_8h_a3a55ee75b3fdef8a9982eba0898f496c}{blit\-\_\-icones} (int etat\-\_\-s2, int etat\-\_\-s3, int etat\-\_\-s4, \hyperlink{structicone__stage1}{icone\-\_\-stage1} s1, \hyperlink{structicone__stage2}{icone\-\_\-stage2} s2, \hyperlink{structicone__stage3}{icone\-\_\-stage3} s3, \hyperlink{structicone__stage4}{icone\-\_\-stage4} s4)}\label{menu_8h_a3a55ee75b3fdef8a9982eba0898f496c}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet les icônes du menu 2 en fonction de leur état. \end{DoxyCompactList}\item 
+\hypertarget{menu_8h_ab7e8edea86ab2307d0bcc707e515a3af}{int \hyperlink{menu_8h_ab7e8edea86ab2307d0bcc707e515a3af}{select\-\_\-stage} ()}\label{menu_8h_ab7e8edea86ab2307d0bcc707e515a3af}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de vérifier si le curseur est pointé ou non sur l'une des icônes du menu 2. Elle retourne 1 si le curseur est pointé sur l'icône du stage 1, 2 pour le stage 2, 3 pour le stage 3 et 4 pour le stage 4. \end{DoxyCompactList}\item 
+\hypertarget{menu_8h_a3a09b0f3e820fc265bd8a80e596bd733}{void \hyperlink{menu_8h_a3a09b0f3e820fc265bd8a80e596bd733}{init\-\_\-menu\-\_\-help} (\hyperlink{struct_background}{Background} $\ast$menu\-\_\-help)}\label{menu_8h_a3a09b0f3e820fc265bd8a80e596bd733}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser le menu help. \end{DoxyCompactList}\item 
+\hypertarget{menu_8h_a449b7998c1f0ae5c38e6f0e028939013}{void \hyperlink{menu_8h_a449b7998c1f0ae5c38e6f0e028939013}{fonction\-\_\-menu} (int $\ast$continuer, \hyperlink{struct_background}{Background} fond\-\_\-menu, \hyperlink{struct_background}{Background} menu\-\_\-help, int $\ast$page, \hyperlink{structbouton}{bouton} exit, \hyperlink{structbouton}{bouton} help, \hyperlink{structbouton}{bouton} play, \hyperlink{structbouton}{bouton} son, \hyperlink{structbouton}{bouton} prec, \hyperlink{structicone__stage1}{icone\-\_\-stage1} s1, \hyperlink{structicone__stage2}{icone\-\_\-stage2} s2, \hyperlink{structicone__stage3}{icone\-\_\-stage3} s3, \hyperlink{structicone__stage4}{icone\-\_\-stage4} s4, B\-I\-T\-M\-A\-P $\ast$Cursor, int $\ast$b\-\_\-play, int $\ast$b\-\_\-exit, int $\ast$b\-\_\-help, int $\ast$b\-\_\-son, int $\ast$menu, int $\ast$etat\-\_\-s2, int $\ast$etat\-\_\-s3, int $\ast$etat\-\_\-s4, int $\ast$b\-\_\-prec, int stage\-\_\-deverouille, int $\ast$turn\-\_\-on\-\_\-music, \hyperlink{structbouton}{bouton} son\-\_\-coupe, int $\ast$sound\-\_\-off, int $\ast$bloquer\-\_\-click, int $\ast$click\-\_\-counter)}\label{menu_8h_a449b7998c1f0ae5c38e6f0e028939013}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de faire appel aux fonctions du menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Las Vegas 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22 Mai 2013 
+\end{DoxyDate}

@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['destroy_5fbarre',['destroy_barre',['../commun_8c.html#a01023e57418ee2f80466270d13eed27b',1,'destroy_barre(Barre *barre):&#160;commun.c'],['../commun_8h.html#a01023e57418ee2f80466270d13eed27b',1,'destroy_barre(Barre *barre):&#160;commun.c']]],
+  ['destroy_5fboutons',['destroy_boutons',['../menu_8c.html#a0b78f1388066640830d349a6ab2f08f6',1,'destroy_boutons(bouton *exit, bouton *help, bouton *play, bouton *son):&#160;menu.c'],['../menu_8h.html#a0b78f1388066640830d349a6ab2f08f6',1,'destroy_boutons(bouton *exit, bouton *help, bouton *play, bouton *son):&#160;menu.c']]],
+  ['destroy_5ffrog',['destroy_frog',['../commun_8c.html#a51555e8d8f6b8b988d2aea7627e99ba5',1,'destroy_frog(Froggy *frog):&#160;commun.c'],['../commun_8h.html#a51555e8d8f6b8b988d2aea7627e99ba5',1,'destroy_frog(Froggy *frog):&#160;commun.c']]],
+  ['destroy_5ficones',['destroy_icones',['../menu_8c.html#a4da3c53aeeb42c0f05cd74a5aeb8c9dc',1,'destroy_icones(icone_stage1 *s1, icone_stage2 *s2, icone_stage3 *s3, icone_stage4 *s4):&#160;menu.c'],['../menu_8h.html#a4da3c53aeeb42c0f05cd74a5aeb8c9dc',1,'destroy_icones(icone_stage1 *s1, icone_stage2 *s2, icone_stage3 *s3, icone_stage4 *s4):&#160;menu.c']]],
+  ['destroy_5fnumero',['destroy_numero',['../commun_8c.html#ae7418c0391a1f68e6eb925ce6252b58b',1,'destroy_numero(Numero *numero):&#160;commun.c'],['../commun_8h.html#ae7418c0391a1f68e6eb925ce6252b58b',1,'destroy_numero(Numero *numero):&#160;commun.c']]],
+  ['destroy_5fpigeon',['destroy_pigeon',['../stage2_8c.html#aeace1d463f92bbc327e6b0c7e7d41455',1,'destroy_pigeon(Pigeon *pigeon):&#160;stage2.c'],['../stage2_8h.html#aeace1d463f92bbc327e6b0c7e7d41455',1,'destroy_pigeon(Pigeon *pigeon):&#160;stage2.c']]],
+  ['destroy_5frat',['destroy_rat',['../stage1_8c.html#a71762fca2faaf2856c86384b15f3448c',1,'destroy_rat(Rat *rat):&#160;stage1.c'],['../stage1_8h.html#a71762fca2faaf2856c86384b15f3448c',1,'destroy_rat(Rat *rat):&#160;stage1.c']]],
+  ['destroy_5freine',['destroy_reine',['../stage4_8c.html#a49c10783a23a6940c6a4e02bf48f632d',1,'destroy_reine(Reine *reine):&#160;stage4.c'],['../stage4_8h.html#a49c10783a23a6940c6a4e02bf48f632d',1,'destroy_reine(Reine *reine):&#160;stage4.c']]],
+  ['destroy_5fserpent',['destroy_serpent',['../stage4_8c.html#a00e6dfd3d7cf49bc6817f445d868105d',1,'destroy_serpent(Serpent *serpent):&#160;stage4.c'],['../stage4_8h.html#a00e6dfd3d7cf49bc6817f445d868105d',1,'destroy_serpent(Serpent *serpent):&#160;stage4.c']]]
+];

@@ -1,0 +1,112 @@
+\hypertarget{stage1_8h}{\section{stage1.\-h File Reference}
+\label{stage1_8h}\index{stage1.\-h@{stage1.\-h}}
+}
+{\ttfamily \#include $<$allegro.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}commun.\-h\char`\"{}}\\*
+Include dependency graph for stage1.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{stage1_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{stage1_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_rat}{Rat}
+\begin{DoxyCompactList}\small\item\em x la position du rat en largeur et y en hauteur. Nous avons 4 voitures dans le jeu donc nous avons besoin de 4 x et de 4 y différents. img est le B\-I\-T\-M\-A\-P de cette voiture puisque elle contient 3 frames donc nous avons 3 images. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{stage1_8h_a2b51498cc7e646f9723907ddbd8440a6}{\#define {\bfseries nbr\-\_\-rat}~4}\label{stage1_8h_a2b51498cc7e646f9723907ddbd8440a6}
+
+\item 
+\hypertarget{stage1_8h_aaf3d7b536350d895985aa9b4917adeee}{\#define {\bfseries nbr\-\_\-coins11}~15}\label{stage1_8h_aaf3d7b536350d895985aa9b4917adeee}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{stage1_8h_a5ea1d3aac92cedac1d41568b0f3d87e2}{void \hyperlink{stage1_8h_a5ea1d3aac92cedac1d41568b0f3d87e2}{init\-\_\-fond11} (\hyperlink{struct_background}{Background} $\ast$fond)}\label{stage1_8h_a5ea1d3aac92cedac1d41568b0f3d87e2}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'initialiser le fond du stage 1 \end{DoxyCompactList}\item 
+\hypertarget{stage1_8h_a4268675daa095898f0c55ec1ad9073b6}{void \hyperlink{stage1_8h_a4268675daa095898f0c55ec1ad9073b6}{init\-\_\-frog11} (\hyperlink{struct_froggy}{Froggy} $\ast$frog)}\label{stage1_8h_a4268675daa095898f0c55ec1ad9073b6}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'initialiser \hyperlink{struct_froggy}{Froggy} dans le stage 1 \end{DoxyCompactList}\item 
+\hypertarget{stage1_8h_a90a81b35297e49d25db1d71d88606886}{void \hyperlink{stage1_8h_a90a81b35297e49d25db1d71d88606886}{init\-\_\-rat} (\hyperlink{struct_rat}{Rat} $\ast$rat)}\label{stage1_8h_a90a81b35297e49d25db1d71d88606886}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'initialiser le rat dans le stage 1 (img,x,y) \end{DoxyCompactList}\item 
+\hypertarget{stage1_8h_a5e72e6ea61d0fd5256da62097b04cb5a}{void \hyperlink{stage1_8h_a5e72e6ea61d0fd5256da62097b04cb5a}{update\-\_\-rat} (\hyperlink{struct_rat}{Rat} $\ast$rat, int step)}\label{stage1_8h_a5e72e6ea61d0fd5256da62097b04cb5a}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet de mettre à jour la position du \hyperlink{struct_rat}{Rat} au fur et à mesure que la posisition du fond se modifie. On doit faire appel à cette fonction à chaque fois que fond11.\-x augmente ou diminue \end{DoxyCompactList}\item 
+int \hyperlink{stage1_8h_a4d5fb26f0e8daa1e2c5f478c43b276d6}{collision\-\_\-rat} (\hyperlink{struct_rat}{Rat} rat, \hyperlink{struct_froggy}{Froggy} frog)
+\begin{DoxyCompactList}\small\item\em Cette fonction détecte s'il y a ou non un contact entre le rat et \hyperlink{struct_froggy}{Froggy}. Si celui-\/ci existe elle retourne 1 sinon elle retourne 0. \end{DoxyCompactList}\item 
+\hypertarget{stage1_8h_a229f6a88a6aa38754ab45f0c611f1257}{void \hyperlink{stage1_8h_a229f6a88a6aa38754ab45f0c611f1257}{init\-\_\-calque11} (\hyperlink{struct_calque}{Calque} $\ast$calque, \hyperlink{struct_froggy}{Froggy} frog)}\label{stage1_8h_a229f6a88a6aa38754ab45f0c611f1257}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser le calque du stage 1 qui est l'image du fond dans lequel les obstacles sont coloriés par des couleurs spécifiques (les trous en blanc de coordonnées 16777215, le plancher en bleu ciel de coordonnées 65535, la zone d'arrivée en orange de coordonnées 16850088) \end{DoxyCompactList}\item 
+\hypertarget{stage1_8h_a309d9720fc9954489a3b45f7f8799a07}{int {\bfseries collision\-\_\-blanc11} (\hyperlink{struct_calque}{Calque} calque, int posx\-\_\-blanc, int y)}\label{stage1_8h_a309d9720fc9954489a3b45f7f8799a07}
+
+\item 
+\hypertarget{stage1_8h_aa197ae16449bac3ac6ba99a894238c5c}{void \hyperlink{stage1_8h_aa197ae16449bac3ac6ba99a894238c5c}{chute11} (int test, \hyperlink{struct_froggy}{Froggy} $\ast$frog, int direction)}\label{stage1_8h_aa197ae16449bac3ac6ba99a894238c5c}
+
+\begin{DoxyCompactList}\small\item\em lorsque test est égale à 1, toutes les touches seront bloquées et \hyperlink{struct_froggy}{Froggy} sera absorbée vers le bas \end{DoxyCompactList}\item 
+\hypertarget{stage1_8h_a08440d1edfb25fe84471e2fcbf011ad7}{int \hyperlink{stage1_8h_a08440d1edfb25fe84471e2fcbf011ad7}{collision\-\_\-bleu11} (\hyperlink{struct_calque}{Calque} calque, int posx\-\_\-bleu, int y)}\label{stage1_8h_a08440d1edfb25fe84471e2fcbf011ad7}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de détecter la nature de la surface au dessous de la grenouille lorsque celle ci saute(plancher, trou ou vide). Elle retourne 1 si c'est un plancher, 2 si c'est un trou et 0 si c'est du vide. \end{DoxyCompactList}\item 
+\hypertarget{stage1_8h_a16cdf575cb8347a95c9cf51db6fe278c}{void \hyperlink{stage1_8h_a16cdf575cb8347a95c9cf51db6fe278c}{init\-\_\-coins11} (\hyperlink{struct_coins}{Coins} $\ast$piece)}\label{stage1_8h_a16cdf575cb8347a95c9cf51db6fe278c}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'initialiser les positions des pièces dans le stage 1 \end{DoxyCompactList}\item 
+\hypertarget{stage1_8h_a05cc58d63fb34b61b66287f386e26b92}{int \hyperlink{stage1_8h_a05cc58d63fb34b61b66287f386e26b92}{collision\-\_\-piece11} (int x, int y, int $\ast$test, \hyperlink{struct_coins}{Coins} piece, int nbr\-\_\-p)}\label{stage1_8h_a05cc58d63fb34b61b66287f386e26b92}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de tester si \hyperlink{struct_froggy}{Froggy} entre en collision avec une piece (\hyperlink{struct_coins}{Coins}) ou non. test prend 1 si la collision existe et 0 si celle-\/ci n'existe pas. elle retourne la position de la pièce avec laquelle il y a eu collision. \end{DoxyCompactList}\item 
+\hypertarget{stage1_8h_a71762fca2faaf2856c86384b15f3448c}{void \hyperlink{stage1_8h_a71762fca2faaf2856c86384b15f3448c}{destroy\-\_\-rat} (\hyperlink{struct_rat}{Rat} $\ast$rat)}\label{stage1_8h_a71762fca2faaf2856c86384b15f3448c}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de libérer la mémoire allouée pour la structure \hyperlink{struct_rat}{Rat}. \end{DoxyCompactList}\item 
+\hypertarget{stage1_8h_add8f7f0d91a85230e4272444fe3295e0}{void \hyperlink{stage1_8h_add8f7f0d91a85230e4272444fe3295e0}{aspiration} (int test, \hyperlink{struct_froggy}{Froggy} $\ast$frog, int direction, int $\ast$aspiration\-\_\-terminee)}\label{stage1_8h_add8f7f0d91a85230e4272444fe3295e0}
+
+\begin{DoxyCompactList}\small\item\em lorsque test est égale à 1, toutes les touches seront bloquées et \hyperlink{struct_froggy}{Froggy} sera absorbée vers le haut \end{DoxyCompactList}\item 
+\hypertarget{stage1_8h_a790cdeddbf49ce807d36bf5fa853da8d}{void \hyperlink{stage1_8h_a790cdeddbf49ce807d36bf5fa853da8d}{fonction\-\_\-stage1} (int $\ast$stage1\-\_\-termine, int $\ast$direction11, int $\ast$key\-\_\-pressed11, int $\ast$frame\-\_\-counter11, int $\ast$test\-\_\-chute11, int $\ast$saut\-\_\-horizontal11, int $\ast$rat\-\_\-counter, int $\ast$vie11, int $\ast$bloquer\-\_\-collision\-\_\-rat, int $\ast$compteur\-\_\-collision\-\_\-rat, int $\ast$nbr\-\_\-piece11, int $\ast$score11, int $\ast$test\-\_\-aspiration, int $\ast$aspiration\-\_\-terminee, \hyperlink{struct_background}{Background} $\ast$fond11, \hyperlink{struct_froggy}{Froggy} $\ast$frog11, \hyperlink{struct_calque}{Calque} $\ast$calque11, \hyperlink{struct_rat}{Rat} $\ast$rat, \hyperlink{struct_coins}{Coins} $\ast$piece11, \hyperlink{struct_pause}{Pause} pause, B\-I\-T\-M\-A\-P $\ast$Cursor, int $\ast$saut\-\_\-vertical11, int $\ast$top11)}\label{stage1_8h_a790cdeddbf49ce807d36bf5fa853da8d}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de faire appel aux fonctions du stage 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Las Vegas 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22 Mai 2013 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{stage1_8h_a4d5fb26f0e8daa1e2c5f478c43b276d6}{\index{stage1.\-h@{stage1.\-h}!collision\-\_\-rat@{collision\-\_\-rat}}
+\index{collision\-\_\-rat@{collision\-\_\-rat}!stage1.h@{stage1.\-h}}
+\subsubsection[{collision\-\_\-rat}]{\setlength{\rightskip}{0pt plus 5cm}int collision\-\_\-rat (
+\begin{DoxyParamCaption}
+\item[{{\bf Rat}}]{rat, }
+\item[{{\bf Froggy}}]{frog}
+\end{DoxyParamCaption}
+)}}\label{stage1_8h_a4d5fb26f0e8daa1e2c5f478c43b276d6}
+
+
+Cette fonction détecte s'il y a ou non un contact entre le rat et \hyperlink{struct_froggy}{Froggy}. Si celui-\/ci existe elle retourne 1 sinon elle retourne 0. 
+
+Cette fonction permet de détecter la nature de la surface au dessous de la grenouille lorsque celle ci se déplace vers la droite ou vers la gauche(plancher, trou ou vide). Elle retourne 1 si c'est un plancher, 2 si c'est un trou et 0 si c'est du vide. 
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{stage1_8h_a4d5fb26f0e8daa1e2c5f478c43b276d6_icgraph}
+\end{center}
+\end{figure}
+
+

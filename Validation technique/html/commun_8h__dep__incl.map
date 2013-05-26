@@ -1,0 +1,14 @@
+<map id="commun.h" name="commun.h">
+<area shape="rect" id="node3" href="$commun_8c.html" title="commun.c" alt="" coords="5,83,88,112"/>
+<area shape="rect" id="node5" href="$menu_8h.html" title="menu.h" alt="" coords="163,83,227,112"/>
+<area shape="rect" id="node7" href="$main_8c.html" title="main.c" alt="" coords="363,160,424,189"/>
+<area shape="rect" id="node9" href="$menu_8c.html" title="menu.c" alt="" coords="163,160,227,189"/>
+<area shape="rect" id="node12" href="$stage2_8h.html" title="stage2.h" alt="" coords="251,83,323,112"/>
+<area shape="rect" id="node16" href="$stage2_8c.html" title="stage2.c" alt="" coords="259,160,331,189"/>
+<area shape="rect" id="node18" href="$stage1_8h.html" title="stage1.h" alt="" coords="448,83,520,112"/>
+<area shape="rect" id="node23" href="$stage1__2_8h.html" title="stage1_2.h" alt="" coords="544,83,629,112"/>
+<area shape="rect" id="node28" href="$stage4_8h.html" title="stage4.h" alt="" coords="653,83,725,112"/>
+<area shape="rect" id="node31" href="$stage4_8c.html" title="stage4.c" alt="" coords="689,160,761,189"/>
+<area shape="rect" id="node21" href="$stage1_8c.html" title="stage1.c" alt="" coords="448,160,520,189"/>
+<area shape="rect" id="node26" href="$stage1__2_8c.html" title="stage1_2.c" alt="" coords="544,160,629,189"/>
+</map>

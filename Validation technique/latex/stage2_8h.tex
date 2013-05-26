@@ -1,0 +1,70 @@
+\hypertarget{stage2_8h}{\section{stage2.\-h File Reference}
+\label{stage2_8h}\index{stage2.\-h@{stage2.\-h}}
+}
+{\ttfamily \#include $<$allegro.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}commun.\-h\char`\"{}}\\*
+Include dependency graph for stage2.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{stage2_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{stage2_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_pigeon}{Pigeon}
+\begin{DoxyCompactList}\small\item\em x la position du \hyperlink{struct_pigeon}{Pigeon} en largeur et y en hauteur. Nous avons un \hyperlink{struct_pigeon}{Pigeon} dans le jeu. img est le B\-I\-T\-M\-A\-P de ce \hyperlink{struct_pigeon}{Pigeon} puisque il contient 5 frames donc nous avons 5 images. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{stage2_8h_a7986de8f5648141ba737c8b3ce6885b7}{void \hyperlink{stage2_8h_a7986de8f5648141ba737c8b3ce6885b7}{init\-\_\-coins2} (\hyperlink{struct_coins}{Coins} $\ast$piece, int xfond)}\label{stage2_8h_a7986de8f5648141ba737c8b3ce6885b7}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'initialiser la position des pièces \end{DoxyCompactList}\item 
+\hypertarget{stage2_8h_a516ca48e699498bd5ccba9413c5ecad6}{void \hyperlink{stage2_8h_a516ca48e699498bd5ccba9413c5ecad6}{increment\-\_\-speed\-\_\-counter} ()}\label{stage2_8h_a516ca48e699498bd5ccba9413c5ecad6}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'incrementer le compteur speed\-\_\-counter \end{DoxyCompactList}\item 
+\hypertarget{stage2_8h_a97475d2d7e70aff142a09ca81dd04d4e}{void \hyperlink{stage2_8h_a97475d2d7e70aff142a09ca81dd04d4e}{init\-\_\-speed\-\_\-counter} ()}\label{stage2_8h_a97475d2d7e70aff142a09ca81dd04d4e}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'initialiser le compteur speed\-\_\-counter \end{DoxyCompactList}\item 
+\hypertarget{stage2_8h_ae13a70ce6d85919f620581f36b3e2cdd}{void \hyperlink{stage2_8h_ae13a70ce6d85919f620581f36b3e2cdd}{init\-\_\-pigeon} (\hyperlink{struct_pigeon}{Pigeon} $\ast$pigeon)}\label{stage2_8h_ae13a70ce6d85919f620581f36b3e2cdd}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'initialiser la position du \hyperlink{struct_pigeon}{Pigeon} \end{DoxyCompactList}\item 
+\hypertarget{stage2_8h_a31b9609566f0e825ae818e9af5b12e98}{void \hyperlink{stage2_8h_a31b9609566f0e825ae818e9af5b12e98}{init\-\_\-background2} (\hyperlink{struct_background}{Background} $\ast$background)}\label{stage2_8h_a31b9609566f0e825ae818e9af5b12e98}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'initialiser le fond du stage3. \end{DoxyCompactList}\item 
+\hypertarget{stage2_8h_ac6bde787b60ae13bb350967577a3d6e9}{void \hyperlink{stage2_8h_ac6bde787b60ae13bb350967577a3d6e9}{init\-\_\-calque2} (\hyperlink{struct_calque}{Calque} $\ast$calque, \hyperlink{struct_pigeon}{Pigeon} pigeon)}\label{stage2_8h_ac6bde787b60ae13bb350967577a3d6e9}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'initialiser le calque qui est l'image du fond dans lequel les obstacles sont coloriés par des couleurs spécifiques(les immeubles en blanc de cordonnées 16777215) \end{DoxyCompactList}\item 
+\hypertarget{stage2_8h_a32117787652b715cd1c735a23b12db7b}{void \hyperlink{stage2_8h_a32117787652b715cd1c735a23b12db7b}{chute2} (int test, \hyperlink{struct_pigeon}{Pigeon} $\ast$pigeon)}\label{stage2_8h_a32117787652b715cd1c735a23b12db7b}
+
+\begin{DoxyCompactList}\small\item\em lorsque test est égale à 1 toutes les touches sont bloquées et le \hyperlink{struct_pigeon}{Pigeon} sera absorbé vers le bas \end{DoxyCompactList}\item 
+\hypertarget{stage2_8h_a352c13a4967a2eabae31c75ba494eec3}{int \hyperlink{stage2_8h_a352c13a4967a2eabae31c75ba494eec3}{collision2} (\hyperlink{struct_calque}{Calque} calque)}\label{stage2_8h_a352c13a4967a2eabae31c75ba494eec3}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction détecte s'il y a ou non un contact entre les immeubles qui sont en blanc sur le \hyperlink{struct_calque}{Calque} et Pigeon.\-si celle ci existe elle retourne 1 sinon elle retourne 0. \end{DoxyCompactList}\item 
+\hypertarget{stage2_8h_ad0d606eae4a1f991ff9d6b66ffa124cf}{int \hyperlink{stage2_8h_ad0d606eae4a1f991ff9d6b66ffa124cf}{collision\-\_\-piece2} (int x, int y, int $\ast$test, \hyperlink{struct_coins}{Coins} piece, int nbr\-\_\-p)}\label{stage2_8h_ad0d606eae4a1f991ff9d6b66ffa124cf}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de tester si le \hyperlink{struct_pigeon}{Pigeon} entre en collision avec une piece (\hyperlink{struct_coins}{Coins}) ou non.\-test prend 1 si la collision existe et 0 si celle-\/ci n'existe pas elle retourne la position de la pièce avec laquelle il ya eu collision. \end{DoxyCompactList}\item 
+\hypertarget{stage2_8h_aeace1d463f92bbc327e6b0c7e7d41455}{void \hyperlink{stage2_8h_aeace1d463f92bbc327e6b0c7e7d41455}{destroy\-\_\-pigeon} (\hyperlink{struct_pigeon}{Pigeon} $\ast$pigeon)}\label{stage2_8h_aeace1d463f92bbc327e6b0c7e7d41455}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de libérer la mémoire allouer pour la structure \hyperlink{struct_pigeon}{Pigeon}. \end{DoxyCompactList}\item 
+\hypertarget{stage2_8h_a034b209449e318bdd43a2007cac42dcc}{void \hyperlink{stage2_8h_a034b209449e318bdd43a2007cac42dcc}{fonction\-\_\-stage2} (\hyperlink{struct_pigeon}{Pigeon} $\ast$pigeon, \hyperlink{struct_background}{Background} $\ast$fond2, \hyperlink{struct_game}{Game} game\-\_\-over, \hyperlink{struct_calque}{Calque} $\ast$calque2, \hyperlink{struct_coins}{Coins} $\ast$piece2, int $\ast$nbr2, int $\ast$test2, int $\ast$frame\-\_\-counter, int $\ast$key\-\_\-pressed2, \hyperlink{struct_pause}{Pause} pause, B\-I\-T\-M\-A\-P $\ast$Cursor, int $\ast$block\-\_\-speed\-\_\-counter, int $\ast$stage2\-\_\-termine, int $\ast$win\-\_\-stage2, int $\ast$score2)}\label{stage2_8h_a034b209449e318bdd43a2007cac42dcc}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de faire appel aux fonctions du stage3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Las Vegas 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22 Mai 2013 
+\end{DoxyDate}

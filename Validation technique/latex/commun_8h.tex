@@ -1,0 +1,158 @@
+\hypertarget{commun_8h}{\section{commun.\-h File Reference}
+\label{commun_8h}\index{commun.\-h@{commun.\-h}}
+}
+{\ttfamily \#include $<$allegro.\-h$>$}\\*
+Include dependency graph for commun.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{commun_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{commun_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_background}{Background}
+\begin{DoxyCompactList}\small\item\em x et y sont les coordonnées du fond. img contient le B\-I\-T\-M\-A\-P du fond \end{DoxyCompactList}\item 
+struct \hyperlink{struct_calque}{Calque}
+\begin{DoxyCompactList}\small\item\em img contient le B\-I\-T\-M\-A\-P du \hyperlink{struct_calque}{Calque} qui est qui est l'image du fond dans lequel les obstacles sont coloriés par des couleurs spécifiques (les trous en blanc de coordonnées 16777215, le plancher en bleu ciel de coordonnées 65535, la zone d'arrivée en orange de coordonnées 16850088 dans tous les stages à l'exception du stage 3 où seulement les obstacles sont coloriés en blanc de coordonnées 16777215) x est inversement proportionelle à fond.\-x. Lorsque cette dernière augmente calque.\-x diminue et inversement \end{DoxyCompactList}\item 
+struct \hyperlink{struct_game}{Game}
+\begin{DoxyCompactList}\small\item\em Cette structure contient les positions x et y des messages Game\-Over et You\-Win. Chacune d'eux contient deux etats mis dans 2 images dans le tableau B\-I\-T\-M\-A\-P $\ast$img\mbox{[}\mbox{]}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_coins}{Coins}
+\begin{DoxyCompactList}\small\item\em x et y sont les coordonnées des différentes pièces organisées dans les tableau int x\mbox{[}\mbox{]} et int y\mbox{[}\mbox{]}. img contient le B\-I\-T\-M\-A\-P du fond \end{DoxyCompactList}\item 
+struct \hyperlink{struct_froggy}{Froggy}
+\begin{DoxyCompactList}\small\item\em x la position de \hyperlink{struct_froggy}{Froggy} en largeur et y en hauteur. Nous avons un seul sprite \hyperlink{struct_froggy}{Froggy} dans le jeu. img est le B\-I\-T\-M\-A\-P de ce pigeon puisque il contient 7 frames donc nous avons 7 images. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_barre}{Barre}
+\begin{DoxyCompactList}\small\item\em Celle ci est la strucuture de la barre de vie. x est la position de la \hyperlink{struct_barre}{Barre} en largeur et y en hauteur. Nous avons une seule \hyperlink{struct_barre}{Barre} de vie dans le jeu. img est le B\-I\-T\-M\-A\-P de cette \hyperlink{struct_barre}{Barre} puisque nous avons dans le jeu 6 vies donc nous avons ici 7 frames. (un pour vie = 0) \end{DoxyCompactList}\item 
+struct \hyperlink{struct_tete}{Tete}
+\begin{DoxyCompactList}\small\item\em Celle-\/ci est la structure de la tête de \hyperlink{struct_froggy}{Froggy} qui s'affiche en haut et à gauche de l'écran dans les stages 1,2 et 4. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_numero}{Numero}
+\begin{DoxyCompactList}\small\item\em Cette structure contient des images de chiffres utilisées pour afficher le score. Puisque les chiffres vont de 0 à 9 donc nous avons ici 10 images. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_pause}{Pause}
+\begin{DoxyCompactList}\small\item\em Cette structure est celle du menu de pause. Elle contient les coordonnées x et y du menu mais aussi les différents états (3 frames) \end{DoxyCompactList}\item 
+struct \hyperlink{struct_chargement}{Chargement}
+\begin{DoxyCompactList}\small\item\em Cette structure contient la barre de chargement du jeu avec ses 4 états d'avancement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{commun_8h_a31cf6aeb50c7069a9eecf4a5cb6b1593}{\#define {\bfseries np2}~52}\label{commun_8h_a31cf6aeb50c7069a9eecf4a5cb6b1593}
+
+\item 
+\hypertarget{commun_8h_af63e360546db8ab66144be8d3f2a4dc6}{\#define {\bfseries nbr\-\_\-piece}~34}\label{commun_8h_af63e360546db8ab66144be8d3f2a4dc6}
+
+\item 
+\hypertarget{commun_8h_ad5a96ff769b25c5d58fec87bc710c019}{\#define {\bfseries nbr\-\_\-serpent}~2}\label{commun_8h_ad5a96ff769b25c5d58fec87bc710c019}
+
+\item 
+\hypertarget{commun_8h_aaa368cdf27a0f5265ac633a3d2dae8fe}{\#define {\bfseries nbr\-\_\-reine}~3}\label{commun_8h_aaa368cdf27a0f5265ac633a3d2dae8fe}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{commun_8h_a3c9afeeceba5da0a2457962c84e6a32b}{void \hyperlink{commun_8h_a3c9afeeceba5da0a2457962c84e6a32b}{supprimer\-\_\-piece} (int pos, \hyperlink{struct_coins}{Coins} $\ast$piece, int $\ast$nbr\-\_\-p)}\label{commun_8h_a3c9afeeceba5da0a2457962c84e6a32b}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de supprimer une pièce d'un tableau de \hyperlink{struct_coins}{Coins} en prenant comme paramètre la position de la pièce à supprimer dans le tableau piece (\hyperlink{struct_coins}{Coins}) et le nombre total de pièces. \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_a98b3aaf8c53ced4c7ee00617437b5709}{void \hyperlink{commun_8h_a98b3aaf8c53ced4c7ee00617437b5709}{update\-\_\-pos\-\_\-coins} (\hyperlink{struct_coins}{Coins} $\ast$piece, int nbr\-\_\-p, int step)}\label{commun_8h_a98b3aaf8c53ced4c7ee00617437b5709}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet de mettre à jour la position des pièces (\hyperlink{struct_coins}{Coins}) au fur et à mesure que la posisition du fond est modifiée. On doit faire appel à cette fonction à chaque fois que fond.\-x augmente ou diminue \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_a7c2650979997ebeb9f2a4d8e45a58aa2}{void \hyperlink{commun_8h_a7c2650979997ebeb9f2a4d8e45a58aa2}{init\-\_\-\-Game\-\_\-\-Over} (\hyperlink{struct_game}{Game} $\ast$game)}\label{commun_8h_a7c2650979997ebeb9f2a4d8e45a58aa2}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser la variable game de type \hyperlink{struct_game}{Game} qui est le message \hyperlink{struct_game}{Game} Over. \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_a6560ca25c4dad26bf465f557114cd9e1}{void \hyperlink{commun_8h_a6560ca25c4dad26bf465f557114cd9e1}{init\-\_\-\-You\-\_\-\-Win} (\hyperlink{struct_game}{Game} $\ast$win)}\label{commun_8h_a6560ca25c4dad26bf465f557114cd9e1}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser la variable win de type \hyperlink{struct_game}{Game} qui est le message You Win. \end{DoxyCompactList}\item 
+void \hyperlink{commun_8h_a1f3d61077c1bb9379a7f01c8bc9a1bb1}{init\-\_\-barre\-\_\-vie} (\hyperlink{struct_barre}{Barre} $\ast$barre)
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser la barre de vie (structure \hyperlink{struct_barre}{Barre}) \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_a20cc1e9561a79df2ab001c2036598021}{void {\bfseries init\-\_\-tete} (\hyperlink{struct_tete}{Tete} $\ast$tete)}\label{commun_8h_a20cc1e9561a79df2ab001c2036598021}
+
+\item 
+\hypertarget{commun_8h_a54d4fc08d9b64e902582638e20c39acc}{void \hyperlink{commun_8h_a54d4fc08d9b64e902582638e20c39acc}{init\-\_\-numero} (\hyperlink{struct_numero}{Numero} $\ast$numero)}\label{commun_8h_a54d4fc08d9b64e902582638e20c39acc}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser la structure \hyperlink{struct_numero}{Numero}. \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_ae7418c0391a1f68e6eb925ce6252b58b}{void \hyperlink{commun_8h_ae7418c0391a1f68e6eb925ce6252b58b}{destroy\-\_\-numero} (\hyperlink{struct_numero}{Numero} $\ast$numero)}\label{commun_8h_ae7418c0391a1f68e6eb925ce6252b58b}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de libérer la mémoire allouée pour la structure \hyperlink{struct_numero}{Numero}. \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_a44437811cdbcb61edc057f27ca357e0f}{void \hyperlink{commun_8h_a44437811cdbcb61edc057f27ca357e0f}{afficher\-\_\-score} (int score, \hyperlink{struct_numero}{Numero} numero)}\label{commun_8h_a44437811cdbcb61edc057f27ca357e0f}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'afficher le score sur l'écran en utilisant les images de la structure \hyperlink{struct_numero}{Numero}. \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_a01023e57418ee2f80466270d13eed27b}{void \hyperlink{commun_8h_a01023e57418ee2f80466270d13eed27b}{destroy\-\_\-barre} (\hyperlink{struct_barre}{Barre} $\ast$barre)}\label{commun_8h_a01023e57418ee2f80466270d13eed27b}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de libérer la mémoire allouée pour la structure \hyperlink{struct_barre}{Barre}. \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_a51555e8d8f6b8b988d2aea7627e99ba5}{void \hyperlink{commun_8h_a51555e8d8f6b8b988d2aea7627e99ba5}{destroy\-\_\-frog} (\hyperlink{struct_froggy}{Froggy} $\ast$frog)}\label{commun_8h_a51555e8d8f6b8b988d2aea7627e99ba5}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de libérer la mémoire allouée pour la structure \hyperlink{struct_froggy}{Froggy}. \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_aa3947c2cfbd7fc011c4c56fb5de1ad64}{void \hyperlink{commun_8h_aa3947c2cfbd7fc011c4c56fb5de1ad64}{init\-\_\-pause} (\hyperlink{struct_pause}{Pause} $\ast$pause)}\label{commun_8h_aa3947c2cfbd7fc011c4c56fb5de1ad64}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser la structure \hyperlink{struct_pause}{Pause} (menu pause) \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_a66232ff660c851787839cecb2cda1288}{int \hyperlink{commun_8h_a66232ff660c851787839cecb2cda1288}{select\-\_\-next} ()}\label{commun_8h_a66232ff660c851787839cecb2cda1288}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de vérifier si le curseur de la souris est pointé ou non sur le bouton next de la structure \hyperlink{struct_game}{Game}. Si c'est le cas elle retourne 1 sinon elle retourne 0. \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_a377375d3c30a972f57bab591a8a366ad}{int \hyperlink{commun_8h_a377375d3c30a972f57bab591a8a366ad}{pause\-\_\-curseur} ()}\label{commun_8h_a377375d3c30a972f57bab591a8a366ad}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de vérifier sur quel bouton du menu \hyperlink{struct_pause}{Pause} le curseur de la souris est pointé. Si il est pointé sur le bouton \char`\"{}resume\char`\"{} elle retourne 1, si c'est sur le bouton \char`\"{}quit\char`\"{} elle retourne 2 sinon elle retourne 0. \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_a61ea9e7d73e9acd8b328d22508ed3fc0}{void \hyperlink{commun_8h_a61ea9e7d73e9acd8b328d22508ed3fc0}{saving} (int stage\-\_\-deverouille)}\label{commun_8h_a61ea9e7d73e9acd8b328d22508ed3fc0}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet une variable de type entier dans un fichier nommé \char`\"{}save.\-txt\char`\"{}. Elle crée un nouveau fichier si celui ci n'existe pas et elle écrase son ancien contenu. \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_aa230b82e6ddb07b5b03406c332cbec4e}{int \hyperlink{commun_8h_aa230b82e6ddb07b5b03406c332cbec4e}{loading} ()}\label{commun_8h_aa230b82e6ddb07b5b03406c332cbec4e}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de charger un entier qui se trouve dans le fichier \char`\"{}save.\-txt\char`\"{} et le retourner. \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_a5c55e1f07b487054c01c9dff7eee8acf}{void \hyperlink{commun_8h_a5c55e1f07b487054c01c9dff7eee8acf}{conversion\-\_\-stage\-\_\-etat\-\_\-s} (int stage\-\_\-deverouille, int $\ast$etat\-\_\-s2, int $\ast$etat\-\_\-s3, int $\ast$etat\-\_\-s4)}\label{commun_8h_a5c55e1f07b487054c01c9dff7eee8acf}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de convertir allant de 1 à 4 en une série d'entiers correspondant à l'état ouvert ou fermé de chaque stage. \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_a9bd991aefaa6ef217ad07a171b6f537e}{void \hyperlink{commun_8h_a9bd991aefaa6ef217ad07a171b6f537e}{init\-\_\-chargement} (\hyperlink{struct_chargement}{Chargement} $\ast$chargement)}\label{commun_8h_a9bd991aefaa6ef217ad07a171b6f537e}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser la structure \hyperlink{struct_chargement}{Chargement}. \end{DoxyCompactList}\item 
+\hypertarget{commun_8h_a1de9d12565300dee655730ad3ba1cb7f}{void \hyperlink{commun_8h_a1de9d12565300dee655730ad3ba1cb7f}{fonction\-\_\-chargement} (int $\ast$loading\-\_\-counter, int $\ast$page, int $\ast$turn\-\_\-on\-\_\-music, \hyperlink{struct_chargement}{Chargement} chargement, \hyperlink{struct_background}{Background} curious\-\_\-froggy)}\label{commun_8h_a1de9d12565300dee655730ad3ba1cb7f}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'afficher l'animation de chargement au début du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+B\-I\-T\-M\-A\-P $\ast$ \hyperlink{commun_8h_a700c2011fa3d781837c4d795a70c7c9d}{Buffer}
+\begin{DoxyCompactList}\small\item\em Ceci est la déclaration du Buffer comme étant variable globale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Las Vegas 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22 Mai 2013 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{commun_8h_a1f3d61077c1bb9379a7f01c8bc9a1bb1}{\index{commun.\-h@{commun.\-h}!init\-\_\-barre\-\_\-vie@{init\-\_\-barre\-\_\-vie}}
+\index{init\-\_\-barre\-\_\-vie@{init\-\_\-barre\-\_\-vie}!commun.h@{commun.\-h}}
+\subsubsection[{init\-\_\-barre\-\_\-vie}]{\setlength{\rightskip}{0pt plus 5cm}void init\-\_\-barre\-\_\-vie (
+\begin{DoxyParamCaption}
+\item[{{\bf Barre} $\ast$}]{barre}
+\end{DoxyParamCaption}
+)}}\label{commun_8h_a1f3d61077c1bb9379a7f01c8bc9a1bb1}
+
+
+Cette fonction permet d'initialiser la barre de vie (structure \hyperlink{struct_barre}{Barre}) 
+
+Cette fonction permet d'initialiser la structure \hyperlink{struct_tete}{Tete}. 
+
+\subsection{Variable Documentation}
+\hypertarget{commun_8h_a700c2011fa3d781837c4d795a70c7c9d}{\index{commun.\-h@{commun.\-h}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!commun.h@{commun.\-h}}
+\subsubsection[{Buffer}]{\setlength{\rightskip}{0pt plus 5cm}B\-I\-T\-M\-A\-P$\ast$ Buffer}}\label{commun_8h_a700c2011fa3d781837c4d795a70c7c9d}
+
+
+Ceci est la déclaration du Buffer comme étant variable globale. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}

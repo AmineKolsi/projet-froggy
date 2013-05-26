@@ -1,0 +1,86 @@
+\hypertarget{stage4_8h}{\section{stage4.\-h File Reference}
+\label{stage4_8h}\index{stage4.\-h@{stage4.\-h}}
+}
+{\ttfamily \#include $<$allegro.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}commun.\-h\char`\"{}}\\*
+Include dependency graph for stage4.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{stage4_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{stage4_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_serpent}{Serpent}
+\begin{DoxyCompactList}\small\item\em x la position du serpent en largeur et y en hauteur. Nous avons 3 serpents dans le jeu donc nous avons besoin de 3 x et de 3 y différents. img est le B\-I\-T\-M\-A\-P de ce serpent puisque il contient 5 positions donc nous avons 5 images. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_reine}{Reine}
+\begin{DoxyCompactList}\small\item\em x la position de reine en largeur et y en hauteur. Nous avons 3 reines dans le jeu donc nous avons besoin de 3 x et de 3 y différents. img est le B\-I\-T\-M\-A\-P de cette voiture puisque elle contient 5 positions donc nous avons 5 images. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{stage4_8h_a3e9f445b0494a3490683f14e6b46dfe5}{void \hyperlink{stage4_8h_a3e9f445b0494a3490683f14e6b46dfe5}{init\-\_\-frog} (\hyperlink{struct_froggy}{Froggy} $\ast$frog)}\label{stage4_8h_a3e9f445b0494a3490683f14e6b46dfe5}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'initialiser la position du froggy \end{DoxyCompactList}\item 
+\hypertarget{stage4_8h_a75d9123eb17a657b2834790e197dcac5}{void \hyperlink{stage4_8h_a75d9123eb17a657b2834790e197dcac5}{init\-\_\-background} (\hyperlink{struct_background}{Background} $\ast$fond)}\label{stage4_8h_a75d9123eb17a657b2834790e197dcac5}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'initialiser le fond du stage 4 \end{DoxyCompactList}\item 
+\hypertarget{stage4_8h_a17d7acdb0990f5a795b879b7d4c2a933}{void \hyperlink{stage4_8h_a17d7acdb0990f5a795b879b7d4c2a933}{init\-\_\-calque} (\hyperlink{struct_calque}{Calque} $\ast$calque, \hyperlink{struct_froggy}{Froggy} frog)}\label{stage4_8h_a17d7acdb0990f5a795b879b7d4c2a933}
+
+\begin{DoxyCompactList}\small\item\em cette fonction permet d'initialiser le calque qui est l'image du fond dont le quel les obstacles sont coloriés par des couleurs spécifiques(les trous en blanc de cordonnées 16777215, le plancher en bleu-\/ciel de cordonnées 65535, la zone d'arrivée en orange de cordonnées 16750088) \end{DoxyCompactList}\item 
+\hypertarget{stage4_8h_a1741bc4a9095db865859796cdb895397}{int {\bfseries collision\-\_\-blanc} (\hyperlink{struct_calque}{Calque} calque, int posx\-\_\-blanc, int y)}\label{stage4_8h_a1741bc4a9095db865859796cdb895397}
+
+\item 
+\hypertarget{stage4_8h_a81f0404b67f1251da4f8241280e64469}{int {\bfseries collision\-\_\-bleu} (\hyperlink{struct_calque}{Calque} calque, int posx\-\_\-bleu, int y)}\label{stage4_8h_a81f0404b67f1251da4f8241280e64469}
+
+\item 
+\hypertarget{stage4_8h_a69323fa6a56c0cb78d4aab2505f4afe6}{void \hyperlink{stage4_8h_a69323fa6a56c0cb78d4aab2505f4afe6}{chute} (int test, \hyperlink{struct_froggy}{Froggy} $\ast$frog, int direction)}\label{stage4_8h_a69323fa6a56c0cb78d4aab2505f4afe6}
+
+\begin{DoxyCompactList}\small\item\em Lorsque test est égale 1 toutes les touches sont bloquées et la grenouille sera apsorbé vers le bas. \end{DoxyCompactList}\item 
+\hypertarget{stage4_8h_aa6bdce33468efec5b8e309e7bda88fd0}{void \hyperlink{stage4_8h_aa6bdce33468efec5b8e309e7bda88fd0}{init\-\_\-coins} (\hyperlink{struct_coins}{Coins} $\ast$piece, int xfond)}\label{stage4_8h_aa6bdce33468efec5b8e309e7bda88fd0}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser les piéces selon x et y. \end{DoxyCompactList}\item 
+\hypertarget{stage4_8h_a3e5b9966f70bb07e205c255bd29675b9}{void \hyperlink{stage4_8h_a3e5b9966f70bb07e205c255bd29675b9}{init\-\_\-serpent} (\hyperlink{struct_serpent}{Serpent} $\ast$serpent)}\label{stage4_8h_a3e5b9966f70bb07e205c255bd29675b9}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser le serpent dans le stage4. \end{DoxyCompactList}\item 
+\hypertarget{stage4_8h_afcdd9c76d845ada8a020279f178ce7d3}{void \hyperlink{stage4_8h_afcdd9c76d845ada8a020279f178ce7d3}{update\-\_\-serpent} (\hyperlink{struct_serpent}{Serpent} $\ast$serpent, int step)}\label{stage4_8h_afcdd9c76d845ada8a020279f178ce7d3}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de mettre à jour la position du \hyperlink{struct_serpent}{Serpent} au fur et à mesure que la position du fond est modifiée.\-On doit faire appel à cette fonction lorsque font.\-x augmente ou dimminue. \end{DoxyCompactList}\item 
+\hypertarget{stage4_8h_a00e6dfd3d7cf49bc6817f445d868105d}{void \hyperlink{stage4_8h_a00e6dfd3d7cf49bc6817f445d868105d}{destroy\-\_\-serpent} (\hyperlink{struct_serpent}{Serpent} $\ast$serpent)}\label{stage4_8h_a00e6dfd3d7cf49bc6817f445d868105d}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de libérer la mémoire allouée pour la structure \hyperlink{struct_serpent}{Serpent}. \end{DoxyCompactList}\item 
+\hypertarget{stage4_8h_a45d4d3c05ad3ebd1fc9411b313a49731}{void \hyperlink{stage4_8h_a45d4d3c05ad3ebd1fc9411b313a49731}{init\-\_\-reine} (\hyperlink{struct_reine}{Reine} $\ast$reine)}\label{stage4_8h_a45d4d3c05ad3ebd1fc9411b313a49731}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser la reine selon x et y. \end{DoxyCompactList}\item 
+\hypertarget{stage4_8h_aa0a8b49219c53b009bcfce9baa6552d9}{void \hyperlink{stage4_8h_aa0a8b49219c53b009bcfce9baa6552d9}{update\-\_\-reine} (\hyperlink{struct_reine}{Reine} $\ast$reine, int step)}\label{stage4_8h_aa0a8b49219c53b009bcfce9baa6552d9}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de mettre à jour la position de la \hyperlink{struct_reine}{Reine} au fur et à mesure que la position du fond est modifiée.\-On doit faire appel à cette fonction lorsque font.\-x augmente ou dimminue. \end{DoxyCompactList}\item 
+\hypertarget{stage4_8h_af9c1a3a167f77e034ec20c9a6faa4a22}{int {\bfseries collision\-\_\-serpent} (\hyperlink{struct_serpent}{Serpent} serpent, \hyperlink{struct_froggy}{Froggy} frog)}\label{stage4_8h_af9c1a3a167f77e034ec20c9a6faa4a22}
+
+\item 
+\hypertarget{stage4_8h_a688d5f67ac53ba5b4ce809a9b0179749}{int {\bfseries collision\-\_\-reine} (\hyperlink{struct_reine}{Reine} reine, \hyperlink{struct_froggy}{Froggy} frog)}\label{stage4_8h_a688d5f67ac53ba5b4ce809a9b0179749}
+
+\item 
+\hypertarget{stage4_8h_a49c10783a23a6940c6a4e02bf48f632d}{void \hyperlink{stage4_8h_a49c10783a23a6940c6a4e02bf48f632d}{destroy\-\_\-reine} (\hyperlink{struct_reine}{Reine} $\ast$reine)}\label{stage4_8h_a49c10783a23a6940c6a4e02bf48f632d}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de libérer la mémoire allouée pour la structure \hyperlink{struct_reine}{Reine}. \end{DoxyCompactList}\item 
+\hypertarget{stage4_8h_a879d2cc861461da8a3e06d4ae4e1dc67}{void \hyperlink{stage4_8h_a879d2cc861461da8a3e06d4ae4e1dc67}{fonction\-\_\-stage4} (int $\ast$direction, int $\ast$key\-\_\-pressed, int $\ast$frame\-\_\-counter, int $\ast$serpent\-\_\-counter, int $\ast$reine\-\_\-counter, int $\ast$saut\-\_\-horizontal, int $\ast$test\-\_\-chute, int $\ast$top, int $\ast$saut\-\_\-vertical, int $\ast$nbr\-\_\-p, int $\ast$score4, int $\ast$vie4, int $\ast$compteur\-\_\-collision\-\_\-reine, int $\ast$bloquer\-\_\-collision\-\_\-reine, \hyperlink{struct_background}{Background} $\ast$fond, \hyperlink{struct_froggy}{Froggy} $\ast$frog, \hyperlink{struct_calque}{Calque} $\ast$calque, \hyperlink{struct_coins}{Coins} $\ast$piece, \hyperlink{struct_serpent}{Serpent} $\ast$serpent, \hyperlink{struct_reine}{Reine} $\ast$reine, \hyperlink{struct_pause}{Pause} pause, B\-I\-T\-M\-A\-P $\ast$Cursor, int $\ast$stage\-\_\-termine, int $\ast$win\-\_\-stage, int $\ast$bloquer\-\_\-animation)}\label{stage4_8h_a879d2cc861461da8a3e06d4ae4e1dc67}
+
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de faire l'appel aux fonctions du stage4. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Las Vegas 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22 Mai 2013 
+\end{DoxyDate}
